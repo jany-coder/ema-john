@@ -22,9 +22,11 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <p>Login email: {loggedInUser.email}</p>
       <Router>
         <Header></Header>
+        <div style={{textAlign: 'center'}}>
+          <p>Login email: {loggedInUser.email}</p>
+        </div>
         <Switch>
           <Route path="/shop">
             <Shop></Shop>
